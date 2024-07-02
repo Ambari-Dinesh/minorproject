@@ -1,0 +1,107 @@
+.main-bg{
+    min-height: 100vh;
+    padding: 10px;
+}
+nav{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span{
+    color: #f9004d;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  nav ul li a:hover{
+    color: #f9004d;
+  }
+
+.sub-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.example_g {
+    font-family: 'Poppins';
+    width: 15vwpx;
+    height: 4vh;
+    padding: 5px;
+    border: none;
+    outline: none;
+    color: #494949;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.example_g:before {
+    content: '';
+    background: linear-gradient(45deg, #FF0000, #FFF700, #FF7000, #FF00FE, #3FF4EB, #9E00FF, #00BEFF, #FF00DD, #FF0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.example_g:active {
+    color: #000
+}
+
+.example_g:active:after {
+    background: transparent;
+}
+
+.example_g:hover {
+    transform: scale(1.05);
+    background-color: #000;
+}
+
+.example_g:hover:before {
+    opacity: 1;
+}
+
+.example_g:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.text-in{
+    color: #000;
+    font-size: 24px;
+    padding: 10px;
+}

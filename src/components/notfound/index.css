@@ -1,0 +1,23 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .background {
+   background-color: white;
+    height: 100%;
+    display: flex;
+ 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  nav{
+    padding: 15px;
+  }
+  
+
+  
